@@ -11,6 +11,14 @@ et godt eksempel på overholdelse GDPR er smittestops appen:
 https://smittestop.dk/spoergsmaal-og-svar/
 
 # teknologi spørgsmål 2:
+Hvilken form for hackerangreb kan ‘klagesiden‘ tænkes at være sårbar overfor, og hvordan kan denne sårbarhed begrænses? 
+Nævn mindst 3 ting man kan gøre for at sikre databasen og personoplysningerne.
+- Sanitize sit input
+- ORM
+- NON-SQL database for at sikre mod SQL injection
+- CORS
+- Hashing af sensitiv data
+
 
 # API (opg5):
 api'en er designet med en fuld CRUD løsning således at endpointet "/vindmolle/" tager imod GET request
