@@ -24,11 +24,14 @@ Nævn mindst 3 ting man kan gøre for at sikre databasen og personoplysningerne.
 api'en er designet med en fuld CRUD løsning således at endpointet "/vindmolle/" tager imod GET request
 ligeledes tager endpointet "/vindmolle/:id" imod PUT DELETE POST samt "GET by ID"
 
-det præcis samme gør sig gældene for endpointet "/elproduktion" som også har en identisk fuld CRUD løsning
+det præcis samme gør sig gældene for endpointet "/elproduktion" og "/serviceliste" som også har en identisk fuld CRUD løsning
 
 jeg har valgt at lave en "post by ID løsning" således man ikke kan lave en post request hvis eksempelvis vindmøllen allerede eksisterer
 
 API'en er deployet på heroku, og deployet til domænet tallboye.com/eksamen
+
+billede af løsning:
+![image](https://user-images.githubusercontent.com/70659124/148546555-9c5c396f-8e25-4c9e-bf43-8d19b4431625.png)
 
 
 # Socket (opg 3)
