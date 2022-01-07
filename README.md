@@ -29,3 +29,9 @@ det præcis samme gør sig gældene for endpointet "/elproduktion" som også har
 jeg har valgt at lave en "post by ID løsning" således man ikke kan lave en post request hvis eksempelvis vindmøllen allerede eksisterer
 
 API'en er deployet på heroku, og deployet til domænet tallboye.com/eksamen
+
+
+# Socket (opg 3)
+![image](https://user-images.githubusercontent.com/70659124/148545279-570d800b-99c9-464d-b887-6899cfc0878c.png)
+![image](https://user-images.githubusercontent.com/70659124/148545329-5fdd60e3-703a-4cd9-a9fc-c3d311f26b3d.png)
+
