@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const windmillScheme = require("../models/serviceListScheme");
+const serviceListScheme = require("../models/serviceListScheme");
 
 router.post('/:id', async function (req, res, next) {
     try {
         const { id: windmillID } = req.params;
-        let windmill = await windmillScheme.findOne({ uniqueID: windmillID });
+        let windmill = await serviceListScheme.findOne({ uniqueID: windmillID });
 
         if(!windmill){
-            windmill = await windmillScheme.create(req.body);
+            windmill = await serviceListScheme.create(req.body);
             res.status(201).json({
                 windmill,
             });
@@ -29,7 +29,7 @@ router.post('/:id', async function (req, res, next) {
 
 router.get('/', async (req, res, next) => {
     try {
-        const Windmills = await windmillScheme.find({});
+        const Windmills = await serviceListScheme.find({});
         res.status(200).json({ Windmills });
     } catch (error) {
         res.status(500).json({
@@ -41,7 +41,7 @@ router.get('/', async (req, res, next) => {
 router.put('/:id', async (req, res, next) => {
     try {
         const { id: windmillId } = req.params;
-        const windmill = await windmillScheme.findOneAndUpdate({ uniqueID: windmillId }, req.body, {
+        const windmill = await serviceListScheme.findOneAndUpdate({ uniqueID: windmillId }, req.body, {
             new: true,
             runValidators: true,
         });
@@ -63,7 +63,7 @@ router.put('/:id', async (req, res, next) => {
 router.delete('/:id', async (req, res, next) => {
     try {
         const { id: windmillId } = req.params;
-        const windmill = await windmillScheme.findOneAndDelete({ uniqueID: windmillId });
+        const windmill = await serviceListScheme.findOneAndDelete({ uniqueID: windmillId });
 
         if (!windmill) {
             return res.status(404).json({
@@ -82,7 +82,7 @@ router.delete('/:id', async (req, res, next) => {
 router.get('/:id', async (req, res, next) => {
     try {
         const { id: windmillId } = req.params;
-        const windmill = await windmillScheme.findOne({ uniqueID: windmillId });
+        const windmill = await serviceListScheme.findOne({ uniqueID: windmillId });
 
         if (!windmill) {
             return res.status(404).json({
