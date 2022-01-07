@@ -7,7 +7,7 @@ GDPR er persondata lovgivningen som sikrer at persondata bliver anvendt fornufti
 - Dokumentere at de lever op til GDPR
 - Sikre at de personer der behandler persondataen er kyndige til det
 
-et godt eksempel på overholdelse GDPR er smittestops appen:
+et godt eksempel på overholdelse GDPR er smittestops appen:  
 https://smittestop.dk/spoergsmaal-og-svar/
 
 # teknologi spørgsmål 2:
