@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const windmillSchema = new mongoose.Schema({
 
-    ID: {
+    uniqueID: {
         type: String,
         required: true,
     },

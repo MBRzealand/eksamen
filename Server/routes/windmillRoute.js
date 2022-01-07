@@ -4,8 +4,9 @@ const windmillScheme = require("../models/windmillScheme");
 
 router.post('/:id', async function (req, res, next) {
     try {
+        res.setHeader('Access-Control-Allow-Origin', '*');
         const { id: windmillID } = req.params;
-        let windmill = await windmillScheme.findOne({ ID: windmillID });
+        let windmill = await windmillScheme.findOne({ uniqueID: windmillID });
 
         if(!windmill){
             windmill = await windmillScheme.create(req.body);
@@ -41,7 +42,7 @@ router.get('/', async (req, res, next) => {
 router.put('/:id', async (req, res, next) => {
     try {
         const { id: windmillId } = req.params;
-        const windmill = await windmillScheme.findOneAndUpdate({ ID: windmillId }, req.body, {
+        const windmill = await windmillScheme.findOneAndUpdate({ uniqueID: windmillId }, req.body, {
             new: true,
             runValidators: true,
         });
@@ -52,7 +53,7 @@ router.put('/:id', async (req, res, next) => {
             });
         }
 
-        res.status(202).json({ secondary: windmill });
+        res.status(202).json({ windmill });
     } catch (error) {
         res.status(500).json({
             message: error.message,
@@ -63,7 +64,7 @@ router.put('/:id', async (req, res, next) => {
 router.delete('/:id', async (req, res, next) => {
     try {
         const { id: windmillId } = req.params;
-        const windmill = await windmillScheme.findOneAndDelete({ ID: windmillId });
+        const windmill = await windmillScheme.findOneAndDelete({ uniqueID: windmillId });
 
         if (!windmill) {
             return res.status(404).json({
@@ -82,7 +83,7 @@ router.delete('/:id', async (req, res, next) => {
 router.get('/:id', async (req, res, next) => {
     try {
         const { id: windmillId } = req.params;
-        const windmill = await windmillScheme.findOne({ ID: windmillId });
+        const windmill = await windmillScheme.findOne({ uniqueID: windmillId });
 
         if (!windmill) {
             return res.status(404).json({

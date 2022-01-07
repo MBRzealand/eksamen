@@ -24,5 +24,5 @@ app.use("/elproduktion", windmills);
 
 
 app.listen(process.env.PORT || 5444,() =>{
-    console.log("server is running")
+    console.log("server is running on port: " + process.env.PORT)
 });

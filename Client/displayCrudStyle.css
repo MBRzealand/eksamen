@@ -1,0 +1,67 @@
+#pageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#cardContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    overflow-y: auto;
+    height: 60%;
+    margin-bottom: 2vh;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+}
+
+#buttonContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-bottom: 4vh;
+}
+
+.btn-primary{
+    width: 10vw;
+}
+
+#inputContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+#inputContainer > input{
+    width: 15vw;
+}
+
+.databaseCard{
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 5px;
+    width: 100%;
+}
+
+#topBar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image:url('https://www.nortonabrasives.com/sites/sga.na.com/files/styles/paragraphs_item__field_paragraph_slide_image__home/public/banner-market-energyenviroment-turbines.jpg?t=444341&itok=YT3gNM98');
+    width:100%;
+    background-size: 100% 100%;
+}
+
+#topBar > h1{
+    color: white;
+}
+
+#topBar > nav > a{
+    color: white;
+}
