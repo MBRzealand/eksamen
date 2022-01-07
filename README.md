@@ -19,3 +19,5 @@ ligeledes tager endpointet "/vindmolle/:id" imod PUT DELETE POST samt "GET by ID
 det præcis samme gør sig gældene for endpointet "/elproduktion" som også har en identisk fuld CRUD løsning
 
 jeg har valgt at lave en "post by ID løsning" således man ikke kan lave en post request hvis eksempelvis vindmøllen allerede eksisterer
+
+API'en er deployet på heroku, og deployet til domænet tallboye.com/eksamen
