@@ -3,7 +3,7 @@ const cardContainer = document.getElementById("cardContainer")
 let getRequest = async () => {
     cardContainer.innerHTML = '';
 
-    let getRequest = await fetch("http://localhost:5444/vindmolle/").then(response => response.json());
+    let getRequest = await fetch("https://tallboye2.herokuapp.com/vindmolle/").then(response => response.json());
 
     for (let i = 0; i < getRequest.Windmills.length; i++) {
         let card = document.createElement("card")
@@ -41,7 +41,7 @@ let postRequest = async () => {
         "Model": MODEL
     }
 
-    let postRequest = await fetch(`http://localhost:5444/vindmolle/${ID}`, { //https://tallboye.herokuapp.com/user
+    let postRequest = await fetch(`http://tallboye2.herokuapp.com/vindmolle/${ID}`, { //https://tallboye.herokuapp.com/user
         method: 'POST',
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(data),
@@ -66,7 +66,7 @@ let updateRequest = async () => {
         "Model": MODEL
     }
 
-    let updateRequest = await fetch(`http://localhost:5444/vindmolle/${ID}`, { //https://tallboye.herokuapp.com/user
+    let updateRequest = await fetch(`http://tallboye2.herokuapp.com/vindmolle/${ID}`, { //https://tallboye.herokuapp.com/user
         method: 'PUT',
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(data),
@@ -80,7 +80,7 @@ let deleteRequest = async () => {
 
     let ID = document.getElementById("ID").value
 
-    let deleteRequest = await fetch(`http://localhost:5444/vindmolle/${ID}`, { //https://tallboye.herokuapp.com/user
+    let deleteRequest = await fetch(`http://tallboye2.herokuapp.com/vindmolle/${ID}`, { //https://tallboye.herokuapp.com/user
         method: 'DELETE',
     });
 
@@ -92,7 +92,7 @@ let searchRequest = async () => {
 
     let search = document.getElementById("ID").value
 
-    let searchRequest = await fetch(`http://localhost:5444/vindmolle/${search}`).then(response => response.json());
+    let searchRequest = await fetch(`http://tallboye2.herokuapp.com/vindmolle/${search}`).then(response => response.json());
 
     console.log(searchRequest)
 

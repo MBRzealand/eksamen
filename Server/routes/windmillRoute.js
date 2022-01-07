@@ -4,7 +4,6 @@ const windmillScheme = require("../models/windmillScheme");
 
 router.post('/:id', async function (req, res, next) {
     try {
-        res.setHeader('Access-Control-Allow-Origin', '*');
         const { id: windmillID } = req.params;
         let windmill = await windmillScheme.findOne({ uniqueID: windmillID });
 
