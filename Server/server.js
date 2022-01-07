@@ -4,6 +4,7 @@ const express = require('express');
 const mongoose = require("mongoose");
 
 const windmills = require("./routes/windmillRoute");
+const powerProduction = require("./routes/powerProductionRoute");
 
 const app = express();
 
@@ -18,7 +19,9 @@ mongoose.connect(
     }
 );
 
-app.use("/secondary", windmills);
+app.use("/vindmolle", windmills);
+app.use("/elproduktion", windmills);
+
 
 app.listen(process.env.PORT || 5444,() =>{
     console.log("server is running")
